@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const es6Renderer = require('express-es6-template-engine');
+
 var indexRouter = require('./routes/index');
 var coG1Router = require('./routes/coG1');
 var coG2Router = require('./routes/coG2');
@@ -20,6 +22,7 @@ var coG10Router = require('./routes/coG10');
 var app = express();
 
 // view engine setup
+app.engine('html', es6Renderer);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
