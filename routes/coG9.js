@@ -10,7 +10,4 @@ router.get('/home', function(req, res, next) {
   res.render('covidR9');
 });
 
-
-
-
 module.exports = router;
