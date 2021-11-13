@@ -16,7 +16,8 @@ var coG6Router = require('./routes/coG6');
 var coG7Router = require('./routes/coG7');
 var coG8Router = require('./routes/coG8');
 var coG9Router = require('./routes/coG9');
-var coG10Router = require('./routes/coG10');
+var coG92Router = require('./routes/coG92');
+
 
 
 var app = express();
@@ -42,7 +43,8 @@ app.use('/coG6', coG6Router);
 app.use('/coG7', coG7Router);
 app.use('/coG8', coG8Router);
 app.use('/coG9', coG9Router);
-app.use('/coG10', coG10Router);
+app.use('/coG92', coG92Router);
+
 
 
 // catch 404 and forward to error handler
