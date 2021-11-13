@@ -376,28 +376,18 @@ body
 <script>
     let covid19data = [];
     document.getElementById('main').style.visibility = "hidden";
-
-
     async function getapi() {
-
         // ดึงข้อมูลจาก api covid19 ลิ้งที่ 5
         const response = await fetch("https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-by-provinces");
-
         // แปลงข้อฒุลให้อยู่รูปแบบ json
         const data = await response.json();
-
-
         console.log(data);
-
         // นำข้อมูลมาใส่ในตัวแปล
         covid19data = data;
-
         // ให้แสดงหน้าหลัก
         document.getElementById('main').style.visibility = "visible";
-
         // ให้ซ่อนปุ่ม relode
         document.getElementById('relodedata').style.visibility = "hidden";
-
     }
 
     // สั่งให้ ฟั่งชั่น getapi ทำงาน
