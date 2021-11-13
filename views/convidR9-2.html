@@ -11,11 +11,68 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
 </head>
 
 <body>
+
+    <div class="CONTAINER">
+        <div class="n1">
+            <nav role="navigation">
+                <div id="menuToggle">
+
+                    <input type="checkbox" />
+
+                    <!--
+                  Some spans to act as a hamburger.
+                  
+                  They are acting like a real hamburger,
+                  not that McDonalds stuff.
+                  -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)
+                                แยกตามรายจังหวัด</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 –
+                                31/03/2021)</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020
+                                – 31/03/2021)</li>
+                        </a>
+                        <a href="#">
+                            <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020
+                                – 31/03/2021) แยกตามรายจังหวัด</li>
+                        </a>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <p style="text-align: center;">รายงานสถานการณ์ Covid - 19 ประจำวัน</p>
+        </div>
+    </div>
     <h1 class="text-center headline mt-5">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)
         แยกตามรายจังหวัด</h1>
     <hr>
@@ -23,16 +80,24 @@
     <div class="spinner-border text-primary text-center" role="status" id="relodedata">
         <span class="sr-only">Loading...</span>
     </div>
+
+
+    <!-- ส่วนหลัก -->
     <div class="" id="main">
         <div class="container mt-5">
             <div class="row">
+
+                <!-- input เลือกวันที่ -->
                 <div class="col align-self-start">
                     <input type="date" id="birthday" name="birthday">
                 </div>
+                <!-- input เลือกวันที่ -->
                 <div class="col align-self-center">
                 </div>
                 <div class="col align-self-end">
+
                     <div class="input-group">
+                        <!-- Drop down  เลือกจังหวัด 77 จังหวัด -->
                         <select class="custom-select" id="provinceTH">
                             <option value="" selected> เลือกจังหวัด ---------</option>
                             <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
@@ -114,9 +179,13 @@
                             <option value="อ่างทอง">อ่างทอง </option>
                             <option value="ไม่ระบุ">ไม่ระบุ</option>
                         </select>
+                        <!-- Drop down  เลือกจังหวัด 77 จังหวัด -->
+
+                        <!-- button ค้นหา -->
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" onclick="myFunction()">ค้นหา</button>
                         </div>
+                        <!-- button ค้นหา -->
                     </div>
                 </div>
             </div>
@@ -124,56 +193,69 @@
 
         <div class="container mt-5">
             <div class="row justify-content-md-center">
+                <!-- ผู้ป่วยยืนยัน -->
                 <div class="col-md-auto">
-                    <div class="card card-size memu-row1">
+                    <div class="card card-size box1">
                         <div class="card-body px-3 py-4-5">
                             <div class="">
                                 <h5 class="text-center font-semibold">ผู้ป่วยยืนยัน(คน)</h5>
                             </div>
                             <div class="mt-2">
+                                <!--  id  total_case_excludeabroad  ผู้ป่วยยืนยัน-->
                                 <h2 id="total_case_excludeabroad" class="text-center font-semibold"></h2>
+                                <!--  id  total_case_excludeabroad  ผู้ป่วยยืนยัน-->
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- ผู้ป่วยยืนยัน -->
             </div>
         </div>
 
         <div class="container">
             <div class="row mt-5">
+
+                <!-- รายใหม่ -->
                 <div class="col-6 col-lg-6 col-md-6 ">
-                    <div class="card card-box memu-row2">
+                    <div class="card card-box box2">
                         <div class="card-body px-3 py-4-5">
                             <div class="">
                                 <h5 class="text-center font-semibold">รายใหม่</h5>
                             </div>
                             <div class="mt-2">
+                                <!--  id  new_case  รายใหม่-->
                                 <h2 id="new_case" class="text-center font-semibold"></h2>
+                                <!--  id  new_case  รายใหม่-->
                             </div>
-
                         </div>
                     </div>
                 </div>
+                <!-- รายใหม่ -->
 
+                <!-- รวมผู้ป่วยทั้งหมด -->
                 <div class="col-6 col-lg-6 col-md-6">
-                    <div class="card card-box memu-row3">
+                    <div class="card card-box box3">
                         <div class="card-body px-3 py-4-5">
                             <div class="">
                                 <h5 class="text-center font-semibold">รวมผู้ป่วยทั้งหมด</h5>
                             </div>
                             <div class="mt-2">
+                                <!--  id  total_case  รวมผู้ป่วยทั้งหมด-->
                                 <h2 id="total_case" class="text-center font-semibold"></h2>
+                                <!--  id  total_case  รวมผู้ป่วยทั้งหมด-->
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- รวมผู้ป่วยทั้งหมด -->
             </div>
         </div>
 
         <div class="container">
             <div class="row mt-5">
+                <!-- เสียชีวิต -->
                 <div class="col-6 col-lg-6 col-md-6 ">
-                    <div class="card card-box memu-row4">
+                    <div class="card card-box box4">
                         <div class="card-body px-3 py-4-5">
                             <div class="">
                                 <h5 class="text-center font-semibold">เสียชีวิต</h5>
@@ -187,7 +269,7 @@
                 </div>
 
                 <div class="col-6 col-lg-6 col-md-6">
-                    <div class="card card-box memu-row5">
+                    <div class="card card-box box5">
                         <div class="card-body px-3 py-4-5">
                             <div class="">
                                 <h5 class="text-center font-semibold">เสียชีวิตสะสม</h5>
@@ -199,113 +281,82 @@
                         </div>
                     </div>
                 </div>
+                <!-- เสียชีวิต -->
             </div>
         </div>
         <h1 class="text-center headline mt-5">รายงานสถานการณ์ COVID-19 ภายในประเทศ อัพเดทรายวัน</h1>
         <p class="text-center headline mt-5" id="txn_date"></p>
     </div>
-
-
+    <!-- ส่วนหลัก -->
 </body>
 
 </html>
 
-
-<style>
-    body {
-        background-color: #3e3d3d;
-    }
-
-    .headline {
-        color: darkgray;
-        font-size: 30px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-
-    .memulink {
-        padding: 3em;
-        margin-top: 3em;
-    }
-
-    .card-size {
-        height: 120px;
-        width: 500px;
-        border-radius: 25px;
-    }
+<!-- ส่วนตกแต่งความส่วยงาม  ด้วย css -->
 
 
-    .card-box {
-        height: 120px;
-        border-radius: 25px;
-    }
+<!-- ส่วนตกแต่งความส่วยงาม  ด้วย css -->
 
 
-    .memu-row1 {
-        background-color: #E0C9F5;
-        border: 6px solid #a15be2;
 
-    }
-
-    .memu-row2 {
-        background-color: #F7DDDC;
-        border: 6px solid #fab2b0;
-    }
-
-    .memu-row3 {
-        background-color: #ABACDE;
-        border: 6px solid #6d6fee;
-
-    }
-
-    .memu-row4 {
-        background-color: #CCE6FC;
-        border: 6px solid #81b8e9;
-    }
-
-    .memu-row5 {
-        background-color: #D9B2D5;
-        border: 6px solid #eb8fe2;
-    }
-</style>
-
+<!-- ส่วนจัดการหน้า ui ให้การประมวนผลโดย ภาษา JavaScript -->
 <script>
     let covid19data = [];
     document.getElementById('main').style.visibility = "hidden";
 
 
     async function getapi() {
-        // console.log("kkk");
+
+        // ดึงข้อมูลจาก api covid19 ลิ้งที่ 9
         const response = await fetch("https://covid19.ddc.moph.go.th/api/Cases/round-1to2-by-provinces");
-        // fetch() timeouts at 300 seconds in Chrome
+
+        // แปลงข้อฒุลให้อยู่รูปแบบ json
         const data = await response.json();
+
+
         console.log(data);
+
+        // นำข้อมูลมาใส่ในตัวแปล
         covid19data = data;
+
+        // ให้แสดงหน้าหลัก
         document.getElementById('main').style.visibility = "visible";
+
+        // ให้ซ่อนปุ่ม relode
         document.getElementById('relodedata').style.visibility = "hidden";
 
     }
 
-
+    // สั่งให้ ฟั่งชั่น getapi ทำงาน
     getapi();
 
-    function myFunction() {
 
+
+    // ฟั่งชั่นเมื่อปุ่มถูกคลิ็ก 
+    function myFunction() {
+        // อ่านข้อมูลวันที่
         let birthday = document.getElementById("birthday").value;
+
+        // อ่านข้อมูลจังหวัด
         let provinceTH = document.getElementById("provinceTH").value;
         console.log(birthday);
         console.log(provinceTH);
+
+
+        // ค้นข้อมูลที่ตรงกับ วันที่และ จังหวัด ในตัวแปร covid19data
         let searchcovid19data = covid19data.find((tree) => {
             if (tree.txn_date === birthday && tree.province === provinceTH) return true;
         })
 
         console.log(searchcovid19data);
+
+        // แสดงผลข้อมูลที่หน้าเว็บไซน์
         document.getElementById('txn_date').innerHTML = searchcovid19data.txn_date;
         document.getElementById('new_case').innerHTML = searchcovid19data.new_case;
-        // document.getElementById('new_case_excludeabroad').innerHTML = searchcovid19data.new_case_excludeabroad;
         document.getElementById('new_death').innerHTML = searchcovid19data.new_death;
-       
         document.getElementById('total_case').innerHTML = searchcovid19data.total_case;
         document.getElementById('total_case_excludeabroad').innerHTML = searchcovid19data.total_case_excludeabroad;
         document.getElementById('total_death').innerHTML = searchcovid19data.total_death;
     }
 </script>
+<!-- ส่วนจัดการหน้า ui ให้การประมวนผลโดย ภาษา JavaScript -->
