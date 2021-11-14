@@ -1,6 +1,240 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <h1>KUY RAI</h1>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ข้อมูลผู้ป่วยประจำวัน</title>
+    <link rel="stylesheet" href="../public/stylesheets/covid3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="CONTAINER">
+      <div class="n1">
+          <nav role="navigation">
+              <div id="menuToggle">
+               
+                <input type="checkbox" />
+               
+                <span></span>
+                <span></span>
+                <span></span>
+            
+                <ul id="menu">
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+                  <a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
+                  <a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+                  <a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+                  <a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
+                </ul>
+                
+              </div>
+            </nav>
+            <div class=".n1">
+          <p style="text-align: center;">ข้อมูลผู้ป่วยประจำวัน (Line Lists)</p>
+        </div> 
+      </div>
+  </div>
+    
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+              <ul class="navbar-nav">
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  รายงานสถานการณ์ COVID-19
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="index_1.html">รายงานประจำวัน</a>
+                  <a class="dropdown-item" href="#">รายงานประจำวัน แยกจังหวัด</a>
+                  <a class="dropdown-item" href="#">ข้อมูลผู้ป่วยประจำวัน</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      รายงานสถานการณ์COVID-19 ระลอก 3
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">วันที่ 01/04/2021 –ปัจจุบัน</a>
+                    <a class="dropdown-item" href="#">วันที่ 01/04/2021 –ปัจจุบัน แยกจังหวัด</a>
+                    <a class="dropdown-item" href="#">ข้อมูลผู้ป่วยระลอก</a>
+                  </div>
+                </li>
+          
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">วันที่ 12/01/2020 – 31/03/2021</a>
+                    <a class="dropdown-item" href="#">วันที่ 12/01/2020 – 31/03/2021 แยกจังหวัด</a>
+                    <a class="dropdown-item" href="#">ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2</a>
+                  </div>
+                </li>
+        </div>
+      </div>
+     
+  
+
+      <section>
+          <main>
+            <br>
+               <!-- ใส่วันที่ -->
+               <div class="col"><div class="col"><div class="col"><div class="col"><div class="col"><div class="col"><div class="col"><div class="col"><div class="col">วันที่ : 10/10/2564</div> </div> </div> </div></div></div> </div></div>
+
+              <!-- ช่องค้นหา ชายหญิง -->
+              <div align = 'right' class="col">
+                <select id="sel-province" name="province" class="form-select" aria-label="Province" onchange="change_filter_province(this.value);">
+                  <option value="" selected="">--เพศ--</option>
+                  <option value="ทั้งหมด">ทั้งหมด</option>
+                  <option value="M">ชาย</option>
+                  <option value="G">หญิง</option>
+                </select>
+             <!-- ช่องค้นหา อายุ -->
+            <select id="sel-province" name="province" class="form-select" aria-label="Province" onchange="change_filter_province(this.value);">
+ 
+              <option value="" selected="">--เลือกอายุ--</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+              <option value="x<10">ต่ำกว่า 10 ปี</option>
+              <option value="x<21">10-19 ปี</option>
+              <option value="x<31">20-29 ปี</option>
+              <option value="x<41">30-39 ปี</option>
+              <option value="x<51">40-49 ปี</option>
+              <option value="x<61">50-59 ปี</option>
+              <option value="x<71">60-69 ปี</option>
+              <option value="x>=70">70ปีขึ้นไป</option>
+            </select>
+           <!-- ช่องค้นหา จังหวัด -->
+        <select id="sel-province" name="province" class="form-select" aria-label="Province" onchange="change_filter_province(this.value);">
+
+          <option value="" selected="">--เลือกจังหวัด--</option>
+          <option value="กระบี่">กระบี่</option>
+          <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+          <option value="นนทบุรี">นนทบุรี</option>
+          <option value="ปทุมธานี">ปทุมธานี</option>
+          <option value="สมุทรปราการ">สมุทรปราการ</option>
+          <option value="สมุทรสาคร">สมุทรสาคร</option>
+          <option value="นครปฐม">นครปฐม</option>
+          <option value="ภูเก็ต">ภูเก็ต</option>
+          <option value="กาญจนบุรี">กาญจนบุรี</option>
+          <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+          <option value="กำแพงเพชร">กำแพงเพชร</option>
+          <option value="ขอนแก่น">ขอนแก่น</option>
+          <option value="จันทบุรี">จันทบุรี</option>
+          <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+          <option value="ชัยนาท">ชัยนาท</option>
+          <option value="ชัยภูมิ">ชัยภูมิ</option>
+          <option value="ชุมพร">ชุมพร</option>
+          <option value="ชลบุรี">ชลบุรี</option>
+          <option value="เชียงใหม่">เชียงใหม่</option>
+          <option value="เชียงราย">เชียงราย</option>
+          <option value="ตรัง">ตรัง</option>
+          <option value="ตราด">ตราด</option>
+          <option value="ตาก">ตาก</option>
+          <option value="นครนายก">นครนายก</option>
+          <option value="นครพนม">นครพนม</option>
+          <option value="นครราชสีมา">นครราชสีมา</option>
+          <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+          <option value="นครสวรรค์">นครสวรรค์</option>
+          <option value="นราธิวาส">นราธิวาส</option>
+          <option value="น่าน">น่าน</option>
+          <option value="บึงกาฬ">บึงกาฬ</option>
+          <option value="บุรีรัมย์">บุรีรัมย์</option>
+          <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+          <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+          <option value="ปัตตานี">ปัตตานี</option>
+          <option value="พะเยา">พะเยา</option>
+          <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+          <option value="พังงา">พังงา</option>
+          <option value="พิจิตร">พิจิตร</option>
+          <option value="พิษณุโลก">พิษณุโลก</option>
+          <option value="เพชรบุรี">เพชรบุรี</option>
+          <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+          <option value="แพร่">แพร่</option>
+          <option value="พัทลุง">พัทลุง</option>
+          <option value="มหาสารคาม">มหาสารคาม</option>
+          <option value="มุกดาหาร">มุกดาหาร</option>
+          <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+          <option value="ยโสธร">ยโสธร</option>
+          <option value="ยะลา">ยะลา</option>
+          <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+          <option value="ระนอง">ระนอง</option>
+          <option value="ระยอง">ระยอง</option>
+          <option value="ราชบุรี">ราชบุรี</option>
+          <option value="ลพบุรี">ลพบุรี</option>
+          <option value="ลำปาง">ลำปาง</option>
+          <option value="ลำพูน">ลำพูน</option>
+          <option value="เลย">เลย</option>
+          <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+          <option value="สกลนคร">สกลนคร</option>
+          <option value="สงขลา">สงขลา</option>
+          <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+          <option value="สระแก้ว">สระแก้ว</option>
+          <option value="สระบุรี">สระบุรี</option>
+          <option value="สิงห์บุรี">สิงห์บุรี</option>
+          <option value="สุโขทัย">สุโขทัย</option>
+          <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+          <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+          <option value="สุรินทร์">สุรินทร์</option>
+          <option value="สตูล">สตูล</option>
+          <option value="หนองคาย">หนองคาย</option>
+          <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+          <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+          <option value="อุดรธานี">อุดรธานี</option>
+          <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+          <option value="อุทัยธานี">อุทัยธานี</option>
+          <option value="อุบลราชธานี">อุบลราชธานี</option>
+          <option value="อ่างทอง">อ่างทอง</option>
+          <option value="ไม่ระบุ">ไม่ระบุ</option>
+        </select>
+      </div>
+    </div> 
+  
+         <!-- ตาราง-->
+              <div class="table-title">
+             
+              </div>
+              <table width="100% class="table-fill>
+              <thead>
+              <tr>
+              <th class="text-left">ลำดับ</th>
+              <th class="text-left">เพศ</th>
+              <th class="text-left">อายุ</th>
+              <th class="text-left">จังหวัด</th>
+              <th class="text-left">ประเทศ</th>
+              <th  class="text-left">สาเหตุการติดเชื้อ</th>
+              </tr> 
+              </thead>
+              <tbody class="table-hover">
+              <tr>
+              <td class="text-left">1</td>
+              <td class="text-left">ชาย</td>
+              <td class="text-left">20</td>
+              <td class="text-left">กระบี่</td>
+              <td class="text-left">Thai</td>
+              <td  class="text-left">สัมผัสใกล้ชิดกับผู้ป่วยยืนยันรายก่อนหน้านี้</td>
+              </tr>
+             
+              </tbody>
+              </table>
+                </body>
+
+
+
+          </main>
+
+         
+
+      </section>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
 </html>
