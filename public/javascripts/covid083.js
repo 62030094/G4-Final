@@ -28,3 +28,21 @@
             document.getElementById('total_death').innerHTML = searchcovid19data.total_death;
             console.log(searchcovid19data);
     }
+    function onClickFunction2(){
+        let birthday =  document.getElementById("dateInput").value;
+        let searchcovid19data = covid19data.find((data) => {
+        if (data.txn_date === birthday) return true;
+    })
+        console.log(searchcovid19data);
+
+        
+            document.getElementById('txn_date2').innerHTML = searchcovid19data.txn_date;
+            document.getElementById('province2').innerHTML = searchcovid19data.province;
+            document.getElementById('new_case2').innerHTML = searchcovid19data.new_case;
+            document.getElementById('total_case2').innerHTML = searchcovid19data.total_case;
+            document.getElementById('new_case_excludeabroad2').innerHTML = searchcovid19data.new_case_excludeabroad;
+            document.getElementById('total_case_excludeabroad2').innerHTML = searchcovid19data.total_case_excludeabroad;
+            document.getElementById('new_ death2').innerHTML = searchcovid19data.new_death;
+            document.getElementById('total_death2').innerHTML = searchcovid19data.total_death;
+    }
+    
