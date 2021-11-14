@@ -9,7 +9,7 @@ async function getapi() {
     console.log(data);
     console.log(covid19data[0].update_date)
 
-    document.getElementById("update_date").innerHTML = covid19data[0].update_date;
+    document.getElementById("updateDate").innerHTML = covid19data[0].update_date;
 }
 
 getapi();
