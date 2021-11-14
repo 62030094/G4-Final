@@ -169,9 +169,9 @@ body
     align-items: center;
     justify-content: center;
     }
-#sm, #md, #lg {
+#sm {
     padding:50px; 
-    background:#CCE6FC; 
+    background:#df8aeb; 
     margin:20px!important; 
     text-align:center!important;
     border-radius:5px!important;
@@ -179,9 +179,69 @@ body
     height: 200px;
    
   }
-  #ms, #dm, #gl, #ml {
+ #md {
     padding:50px; 
-    background:#F7DDDC; 
+    background:#d255e2; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 300px;
+    height: 200px;
+   
+  }
+  #lg {
+    padding:50px; 
+    background:#a3c8ff; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 300px;
+    height: 200px;
+   
+  }
+#ll {
+    padding:50px; 
+    background:#6ca6fc; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 300px;
+    height: 200px;
+   
+  }
+  #ms {
+    padding:50px; 
+    background:#f3f2a2; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 400px;
+    height: 200px;
+   
+  }
+ #dm {
+    padding:50px; 
+    background:#f0ed53; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 400px;
+    height: 200px;
+   
+  }
+  #gl {
+    padding:50px; 
+    background:#ec7f7c; 
+    margin:20px!important; 
+    text-align:center!important;
+    border-radius:5px!important;
+    width: 400px;
+    height: 200px;
+   
+  } 
+  #ml {
+    padding:50px; 
+    background:#fa3932; 
     margin:20px!important; 
     text-align:center!important;
     border-radius:5px!important;
