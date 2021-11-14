@@ -1,202 +1,245 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
 
 <head>
-	<title>Covid - 19</title>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../public/stylesheets/covid099.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>>
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Kanit', sans-serif;
+  }
+</style>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="../public/stylesheets/covid099.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
+<body class="w3-light-grey">
 
-<body>
-	<header> <div class="CONTAINER">
-		<div class="n1">
-			<nav role="navigation">
-				<div id="menuToggle">
-				  <!--
-				  A fake / hidden checkbox is used as click reciever,
-				  so you can use the :checked selector on it.
-				  -->
-				  <input type="checkbox" />
-				  
-				  <!--
-				  Some spans to act as a hamburger.
-				  
-				  They are acting like a real hamburger,
-				  not that McDonalds stuff.
-				  -->
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  
-				  <!--
-				  Too bad the menu has to be inside of the button
-				  but hey, it's pure CSS magic.
-				  -->
-				  <ul id="menu">
-					<a href="./covid027.html"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
-					<a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
-					<a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
-					<a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
-					<a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
-					<a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
-					<a href="#"><li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
-					<a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
-					<a href="#"><li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
-				  </ul>
-				  
-				</div>
-			  </nav>
-			  
-			<p style="text-align: center;">รายงานสถานการณ์ Covid - 19 ประจำวัน <br>แยกตามรายจังหวัด</p>
-		</div>
-	</div>
-</header>
-	<section>
-		<main>
-			<div class="container">
-				<div class="row">
-					<p id=update_date class="col">อัพเดทรายวัน: </p>
-					<div class="col"></div>
-					<div class="col">จังหวัด :
-						<select id="province" name="province" class="form-select" aria-label="Province"
-							onchange=showData(this.value)>
-							<option value="" selected="">---เลือกจังหวัด---</option>
-							<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-							<option value="นนทบุรี">นนทบุรี</option>
-							<option value="ปทุมธานี">ปทุมธานี</option>
-							<option value="สมุทรปราการ">สมุทรปราการ</option>
-							<option value="สมุทรสาคร">สมุทรสาคร</option>
-							<option value="นครปฐม">นครปฐม</option>
-							<option value="ภูเก็ต">ภูเก็ต</option>
-							<option value="กระบี่">กระบี่</option>
-							<option value="กาญจนบุรี">กาญจนบุรี</option>
-							<option value="กาฬสินธุ์">กาฬสินธุ์</option>
-							<option value="กำแพงเพชร">กำแพงเพชร</option>
-							<option value="ขอนแก่น">ขอนแก่น</option>
-							<option value="จันทบุรี">จันทบุรี</option>
-							<option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
-							<option value="ชัยนาท">ชัยนาท</option>
-							<option value="ชัยภูมิ">ชัยภูมิ</option>
-							<option value="ชุมพร">ชุมพร</option>
-							<option value="ชลบุรี">ชลบุรี</option>
-							<option value="เชียงใหม่">เชียงใหม่</option>
-							<option value="เชียงราย">เชียงราย</option>
-							<option value="ตรัง">ตรัง</option>
-							<option value="ตราด">ตราด</option>
-							<option value="ตาก">ตาก</option>
-							<option value="นครนายก">นครนายก</option>
-							<option value="นครพนม">นครพนม</option>
-							<option value="นครราชสีมา">นครราชสีมา</option>
-							<option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
-							<option value="นครสวรรค์">นครสวรรค์</option>
-							<option value="นราธิวาส">นราธิวาส</option>
-							<option value="น่าน">น่าน</option>
-							<option value="บึงกาฬ">บึงกาฬ</option>
-							<option value="บุรีรัมย์">บุรีรัมย์</option>
-							<option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
-							<option value="ปราจีนบุรี">ปราจีนบุรี</option>
-							<option value="ปัตตานี">ปัตตานี</option>
-							<option value="พะเยา">พะเยา</option>
-							<option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
-							<option value="พังงา">พังงา</option>
-							<option value="พิจิตร">พิจิตร</option>
-							<option value="พิษณุโลก">พิษณุโลก</option>
-							<option value="เพชรบุรี">เพชรบุรี</option>
-							<option value="เพชรบูรณ์">เพชรบูรณ์</option>
-							<option value="แพร่">แพร่</option>
-							<option value="พัทลุง">พัทลุง</option>
-							<option value="มหาสารคาม">มหาสารคาม</option>
-							<option value="มุกดาหาร">มุกดาหาร</option>
-							<option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
-							<option value="ยโสธร">ยโสธร</option>
-							<option value="ยะลา">ยะลา</option>
-							<option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
-							<option value="ระนอง">ระนอง</option>
-							<option value="ระยอง">ระยอง</option>
-							<option value="ราชบุรี">ราชบุรี</option>
-							<option value="ลพบุรี">ลพบุรี</option>
-							<option value="ลำปาง">ลำปาง</option>
-							<option value="ลำพูน">ลำพูน</option>
-							<option value="เลย">เลย</option>
-							<option value="ศรีสะเกษ">ศรีสะเกษ</option>
-							<option value="สกลนคร">สกลนคร</option>
-							<option value="สงขลา">สงขลา</option>
-							<option value="สมุทรสงคราม">สมุทรสงคราม</option>
-							<option value="สระแก้ว">สระแก้ว</option>
-							<option value="สระบุรี">สระบุรี</option>
-							<option value="สิงห์บุรี">สิงห์บุรี</option>
-							<option value="สุโขทัย">สุโขทัย</option>
-							<option value="สุพรรณบุรี">สุพรรณบุรี</option>
-							<option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
-							<option value="สุรินทร์">สุรินทร์</option>
-							<option value="สตูล">สตูล</option>
-							<option value="หนองคาย">หนองคาย</option>
-							<option value="หนองบัวลำภู">หนองบัวลำภู</option>
-							<option value="อำนาจเจริญ">อำนาจเจริญ</option>
-							<option value="อุดรธานี">อุดรธานี</option>
-							<option value="อุตรดิตถ์">อุตรดิตถ์</option>
-							<option value="อุทัยธานี">อุทัยธานี</option>
-							<option value="อุบลราชธานี">อุบลราชธานี</option>
-							<option value="อ่างทอง">อ่างทอง</option>
-							<option value="ไม่ระบุ">ไม่ระบุ</option>
-						</select>
-					</div>
-				</div>
-				
-				
-				
-			</div>
-			<div id="resultBlock1">
-				<div id="am">
-					<p id="prefix">จำนวนผู้ติดเชื้อรายใหม่ </p>
+ <!-- Top container -->
+ <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+      class="fa fa-bars"></i> เมนู</button>
+  <span id=update_date class="w3-right" style="padding:8px 7px;">11/01/2543</span>
+  <span class="w3-bar-item w3-right" style="padding:8px 1px;">วันที่อัพเดท :</span>
+</div>
 
-					<h6 id=newCase>0</h6>
-					<p id="suffix">ราย</p>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container" style="padding: 5%;">
+    <h5><b>Covid-19</b></h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+      onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
+    <a href="covid027.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+    <a href="covid099.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด</a><br><br>
+  </div>
+</nav>
 
-				</div>
-				<div id="bd">
-					<p id="prefix">จำนวนผู้เสียชีวิต</p>
 
-					<h6 id="newDeath">0</h6>
-					<p id="suffix">ราย</p>
 
-				</div>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
 
-		</main>
-		<article>
-			<div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div style="text-align: center;">จำนวนผู้ติดเชื้อสะสม</div>
-                        <div id="graph"></div>
-                     </div>
-                     <div class="col">
-                        <div style="text-align: center;">จำนวนผู้ติดเชื้อสะสม <br>ไม่รวมต่างชาติ</div>
-                        <div id="graph1"></div>
-                     </div>
-                </div>
-		</article>
-	</section>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:25px; padding-bottom:25px;">
+      <h3>
+        <center><b>Covid-19 ประจำวันแยกรายจังหวัด</b></center>
+      </h3>
+    </header>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+    <div class="w3-container">
+      <input  id="province" class="form-control w3-right" list="datalistOptions" id="exampleDataList" placeholder="โปรดเลือกจังหวัด"
+        style="width: 20%;" onchange=showData(this.value)>
+      <datalist id="datalistOptions">
+        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+        <option value="นนทบุรี">นนทบุรี</option>
+        <option value="ปทุมธานี">ปทุมธานี</option>
+        <option value="สมุทรปราการ">สมุทรปราการ</option>
+        <option value="สมุทรสาคร">สมุทรสาคร</option>
+        <option value="นครปฐม">นครปฐม</option>
+        <option value="ภูเก็ต">ภูเก็ต</option>
+        <option value="กระบี่">กระบี่</option>
+        <option value="กาญจนบุรี">กาญจนบุรี</option>
+        <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+        <option value="กำแพงเพชร">กำแพงเพชร</option>
+        <option value="ขอนแก่น">ขอนแก่น</option>
+        <option value="จันทบุรี">จันทบุรี</option>
+        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+        <option value="ชัยนาท">ชัยนาท</option>
+        <option value="ชัยภูมิ">ชัยภูมิ</option>
+        <option value="ชุมพร">ชุมพร</option>
+        <option value="ชลบุรี">ชลบุรี</option>
+        <option value="เชียงใหม่">เชียงใหม่</option>
+        <option value="เชียงราย">เชียงราย</option>
+        <option value="ตรัง">ตรัง</option>
+        <option value="ตราด">ตราด</option>
+        <option value="ตาก">ตาก</option>
+        <option value="นครนายก">นครนายก</option>
+        <option value="นครพนม">นครพนม</option>
+        <option value="นครราชสีมา">นครราชสีมา</option>
+        <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+        <option value="นครสวรรค์">นครสวรรค์</option>
+        <option value="นราธิวาส">นราธิวาส</option>
+        <option value="น่าน">น่าน</option>
+        <option value="บึงกาฬ">บึงกาฬ</option>
+        <option value="บุรีรัมย์">บุรีรัมย์</option>
+        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+        <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+        <option value="ปัตตานี">ปัตตานี</option>
+        <option value="พะเยา">พะเยา</option>
+        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+        <option value="พังงา">พังงา</option>
+        <option value="พิจิตร">พิจิตร</option>
+        <option value="พิษณุโลก">พิษณุโลก</option>
+        <option value="เพชรบุรี">เพชรบุรี</option>
+        <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+        <option value="แพร่">แพร่</option>
+        <option value="พัทลุง">พัทลุง</option>
+        <option value="มหาสารคาม">มหาสารคาม</option>
+        <option value="มุกดาหาร">มุกดาหาร</option>
+        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+        <option value="ยโสธร">ยโสธร</option>
+        <option value="ยะลา">ยะลา</option>
+        <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+        <option value="ระนอง">ระนอง</option>
+        <option value="ระยอง">ระยอง</option>
+        <option value="ราชบุรี">ราชบุรี</option>
+        <option value="ลพบุรี">ลพบุรี</option>
+        <option value="ลำปาง">ลำปาง</option>
+        <option value="ลำพูน">ลำพูน</option>
+        <option value="เลย">เลย</option>
+        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+        <option value="สกลนคร">สกลนคร</option>
+        <option value="สงขลา">สงขลา</option>
+        <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+        <option value="สระแก้ว">สระแก้ว</option>
+        <option value="สระบุรี">สระบุรี</option>
+        <option value="สิงห์บุรี">สิงห์บุรี</option>
+        <option value="สุโขทัย">สุโขทัย</option>
+        <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+        <option value="สุรินทร์">สุรินทร์</option>
+        <option value="สตูล">สตูล</option>
+        <option value="หนองคาย">หนองคาย</option>
+        <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+        <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+        <option value="อุดรธานี">อุดรธานี</option>
+        <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+        <option value="อุทัยธานี">อุทัยธานี</option>
+        <option value="อุบลราชธานี">อุบลราชธานี</option>
+        <option value="อ่างทอง">อ่างทอง</option>
+        <option value="ไม่ระบุ">ไม่ระบุ</option>
+      </datalist>
+      <label for="exampleDataList" class="form-label w3-right"
+        style="font-size: 20px; margin-right: 1%;">จังหวัด</label>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="resultBlock1">
+          <div id="am">
+            <div style="margin-bottom: 5%;">
+              <p id="prefix">จำนวนผู้ติดเชื้อรายใหม่</p>
+            </div>
+            <h5 id=newCase>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+          <div id="bd">
+            <div>
+              <p>จำนวนผู้ติดเชื้อรายใหม่ในประเทศ</p>
+            </div>
+            <h5 id=newCaseEx>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+          <div id="ba">
+            <p>จำนวนผู้ที่เสียชีวิต</p>
+            <h5 id=newDeath>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        <div id="resultBlock1">
+          <div id="nm">
+            <p >จำนวนผู้ติดเชื้อรายใหม่สะสม </p>
+            <h5 id=totalCase>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+          <div id="km">
+            <p >จำนวนผู้ติดเชื้อรายใหม่ในประเทศสะสม</p>
+            <h5 id=totalCaseEx>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+          <div id="gm">
+            <p >จำนวนผู้ที่เสียชีวิตสะสม</p>
+            <h5 id=totalDeath>0</h5>
+            <p style="padding-top: 5px;">ราย</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<script src="../public/javascripts/covid099.js"></script>
+      <!-- Footer -->
+      <footer class="w3-container w3-dark-grey w3-padding-32">
+        <h4>นายอัศวชาติ ดินแดง 62030099</h4>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+          overlayBg.style.display = "none";
+        } else {
+          mySidebar.style.display = 'block';
+          overlayBg.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+      <script src="../public/javascripts/covid099.js"></script>
 </body>
 </html>
