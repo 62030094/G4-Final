@@ -24,5 +24,9 @@ function showData() {
 
     console.log(searchcovid19data)
     document.getElementById("newCase").innerHTML = searchcovid19data.new_case;
+    document.getElementById("totalCase").innerHTML = searchcovid19data.total_case;
+    document.getElementById("newCaseEx").innerHTML = searchcovid19data.new_case_excludeabroad;
+    document.getElementById("totalCaseEx").innerHTML = searchcovid19data.total_case_excludeabroad;
     document.getElementById("newDeath").innerHTML = searchcovid19data.new_death;
+    document.getElementById("totalDeath").innerHTML = searchcovid19data.total_death;
 }
