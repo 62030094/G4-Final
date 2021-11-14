@@ -74,8 +74,11 @@
                 </h3>
             </header>
 
-            <div class="w3-container">
-                <input class="form-control w3-right" list="datalistOptions" id="exampleDataList" placeholder="โปรดเลือกจังหวัด" style="width: 20%;" />
+            
+            
+
+            <div class="w3-container">                
+                <input class="form-control w3-right" list="datalistOptions" id="exampleDataList" placeholder="โปรดเลือกจังหวัด" style="width: 20%;"/>
                 <datalist id="datalistOptions">
                     <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                     <option value="นนทบุรี">นนทบุรี</option>
@@ -156,9 +159,13 @@
                     <option value="อ่างทอง">อ่างทอง</option>
                     <option value="ไม่ระบุ">ไม่ระบุ</option>
                 </datalist>
-                <label for="exampleDataList" class="form-label w3-right" style="font-size: 20px; margin-right: 1%;">จังหวัด</label>
+                
+                <div class = "container-date">
+                    <input type="date" name="dateofbirth" id="dateofbirth" style="color: rgb(134, 134, 134);">
+                    </div>
                 <div></div>
-            </div>
+            
+        </div>
 
             <!--รายละเอียด-->
            <!-- Cards -->
@@ -168,7 +175,7 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้ติดเชื้อรายใหม่</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="new_case">0</h5>                            
                             <h5 class="card-text">ราย</h5>                             
                         </div>
                     </div>
@@ -177,7 +184,7 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้ติดเชื้อสะสม</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="total_case">0</h5>                            
                             <h5 class="card-text">ราย</h5>   
                         </div>
                     </div>
@@ -192,7 +199,7 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้เสียชีวิตรายใหม่</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="new_death">0</h5>                            
                             <h5 class="card-text">ราย</h5>                            
                         </div>
                     </div>
@@ -201,7 +208,7 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้เสียชีวิตสะสม</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="total_death">0</h5>                            
                             <h5 class="card-text">ราย</h5>                            
                         </div>
                     </div>
@@ -219,7 +226,7 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้ติดเชื้อรายใหม่</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="new_case_excludeabroad">0</h5>                            
                             <h5 class="card-text">ราย</h5>                            
                         </div>
                     </div>
@@ -228,19 +235,32 @@
                     <div class="card card-shadow text-center card-padding" style="background-color: rgba(255, 255, 255, 0.747); border-radius: 30px;">
                         <div class="card-body">
                             <h4 class="card-title">ผู้ติดเชื้อสะสม</h4>
-                            <h5 class="card-text">99</h5>                            
+                            <h5 class="card-text" id="total_case_excludeabroad">0</h5>                            
                             <h5 class="card-text">ราย</h5>                            
                         </div>
                     </div>
                     <!--ผู้เสียชีวิตสะสม-->                                
                 </div>
             </div>
-            <!-- Cards 3 -->
-            
+            <!-- Cards 3 -->            
         </div>
-
         <!--รายละเอียด-->
+        <!--
+            new_case
+            total_case
 
+            new_case_excludeabroad
+            total_case_excludeabroad
+
+            new_death
+            total_death
+
+
+
+
+
+
+        -->
 
 
 
