@@ -1,463 +1,375 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
+  <title>Covid - 19</title>
 <head>
-  <title>รายงานสถานการณ์ COVID-19 ระลอก 1 - 2</title>
-  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../public/stylesheets/template.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
-
-  <div class="CONTAINER">
-    <div class="n1">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)
-              </li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)
-                แยกตามรายจังหวัด</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 –
-                31/03/2021)</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020
-                – 31/03/2021)</li>
-            </a>
-            <a href="#">
-              <li style="font-size: 15px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020
-                – 31/03/2021) แยกตามรายจังหวัด</li>
-            </a>
-          </ul>
-
-        </div>
-      </nav>
-
-      <p style="text-align: center;">รายงานสถานการณ์ Covid - 19 ประจำวัน</p>
-    </div>
-  </div>
-  <div class="text-center mt-5">
-    <h1>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</h1>
-    <h2>(ตั้งแต่ 12/01/2020 - 31/03/2021)</h2>
-  </div>
-
-  <hr>
-  <div class="row">
-    <div class="col align-self-start">
-    </div>
-    <div class="col align-self-center">
-    </div>
-    <div class="col align-self-end">
-      <div class="input-group">
-        <div class="col align-self-start">
-          <div class="row">
-            <div class="input-group-append">
-              <input type="date" id="inputdate" name="">
-              <button class="btn btn-success" type="button" onclick="search()">ค้นหา</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container main-container mt-5">
-    <div class="container mt-5">
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-          <div class="card card-size box1">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ข้อมูลประจำวัน</h5>
-              </div>
-              <div class="mt-2">
-                <h1 id="txn_date" class="text-center font-semibold"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row mt-5">
-        <div class=" col-lg-3 mt-2 ">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่</h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="new_case" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่</h5>
-              </div>
-              <div class="mt-2">
-
-                <h2 id="total_case" class="text-center font-semibold"></h2>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="new_case_excludeabroad" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></< /h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="total_case_excludeabroad" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row mt-5">
-        <div class=" col-lg-3 mt-2 ">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ผู้เข้ารับการรักษา</h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="new_recovered" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ยอดรวมผู้เข้ารับการรักษา</h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="total_recovered" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">ยอดผู้เสียชีวิต</h5>
-              </div>
-              <div class="mt-2">
-
-                <h2 id="new_death" class="text-center font-semibold"></h2>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-lg-3 mt-2">
-          <div class="card card-box box-data">
-            <div class="card-body px-3 py-4-5">
-              <div class="">
-                <h5 class="text-center font-semibold">รวมผู้ป่วยทั้งหมด</h5>
-              </div>
-              <div class="mt-2">
-                <h2 id="total_death" class="text-center font-semibold"></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-    <script src="/routes/coG8.js"></script>
-</body>
-
-</html>
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>>
 <style>
-  body {
-    /* background-color: #3e3d3d; */
-    margin: 0;
-    padding: 0;
-  }
-
-  .n1 {
-    background-color: #E0C9F5;
-    padding: 10px;
-    font-size: 25px;
-  }
-
-  .main-container {
-    height: 36em;
-    padding: 5em;
-    margin-bottom: 30px;
-    background-color: gainsboro;
-    border: 5px solid rgb(139, 199, 221);
-    border-radius: 12px;
-    padding: 5px;
-  }
-
-
-  .card-size {
-    height: 120px;
-    width: 500px;
-    border-radius: 25px;
-  }
-
-
-  .card-box {
-    height: 120px;
-    border-radius: 25px;
-  }
-
-
-  .box1 {
-    background-color: #bcbabf;
-
-  }
-
-
-  .box-data {
-    background-color: #f1c2bb;
-
-  }
-
-
-
-  #menuToggle {
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-
-    z-index: 1;
-
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  #menuToggle a {
-    text-decoration: none;
-    color: #232323;
-
-    transition: color 0.3s ease;
-  }
-
-  #menuToggle a:hover {
-    color: tomato;
-  }
-
-
-  #menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-
-    cursor: pointer;
-
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
-  }
-
-  /*
- * Just a quick hamburger
- */
-  #menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-
-    background: #cdcdcd;
-    border-radius: 3px;
-
-    z-index: 1;
-
-    transform-origin: 4px 0px;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      opacity 0.55s ease;
-  }
-
-  #menuToggle span:first-child {
-    transform-origin: 0% 0%;
-  }
-
-  #menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-  }
-
-
-  #menuToggle input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-  }
-
-
-  #menuToggle input:checked~span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-
-
-  #menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-  }
-
-
-  #menu {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 30px;
-    padding-top: 125px;
-
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  }
-
-  #menu li {
-    padding: 10px 0;
-    font-size: 22px;
-  }
-
-  #menuToggle input:checked~ul {
-    transform: none;
-  }
-
-  .n1 {
-    font-size: 20px;
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Kanit', sans-serif;
   }
 </style>
 
+<body class="w3-light-grey">
 
-<script>
+  <!-- Top container -->
+  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+        class="fa fa-bars"></i> เมนู</button>
+    <span class="w3-right" style="padding:8px 7px;"></span>
+    <span class="w3-bar-item w3-right" style="padding:8px 1px;"></span>
+  </div>
 
-  let c19 = [];
-
-  async function getapicovid19() {
-    // ดึงข้อมุลจาก api 
-    const res = await fetch("https://covid19.ddc.moph.go.th/api/Cases/round-1to2-all");
-
-    // แปลงข้อมูล เป็น json
-    const data = await res.json();
-    console.log(data);
-    c19 = data;
-  }
-
-  getapicovid19();
-
-  function search() {
-    // ดึงวันที่
-    let inputdate = document.getElementById("inputdate").value;
-    console.log(inputdate);
-
-    // ดึงข้อมูลวันที่ ที่ตรงกับ inputdate
-    let searchc19 = c19.find((tree) => {
-      if (tree.txn_date === inputdate) return true;
-    })
-
-    console.log(searchc19);
-    // เปลี่ยนแปลงข้อมูล ตาม id 
-    document.getElementById("txn_date").innerHTML = searchc19.txn_date
-    document.getElementById("new_case").innerHTML = searchc19.new_case
-    document.getElementById("total_case").innerHTML = searchc19.total_case
-    document.getElementById("new_case_excludeabroad").innerHTML = searchc19.new_case_excludeabroad
-    document.getElementById("total_case_excludeabroad").innerHTML = searchc19.total_case_excludeabroad
-    document.getElementById("new_death").innerHTML = searchc19.new_death
-    document.getElementById("total_death").innerHTML = searchc19.total_death
-    document.getElementById("new_recovered").innerHTML = searchc19.new_recovered
-    document.getElementById("total_recovered").innerHTML = searchc19.total_recovered
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container" style="padding: 5%;">
+      <h5><b>Covid-19</b></h5>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+        onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด</a><br><br>
+    </div>
+  </nav>
 
 
-  }
-</script>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:25px; padding-bottom:25px;">
+      <div class="container-sm 10 ">
+        <h1>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</h1>
+        
+        <h2><GG class="box-data8">.................................</GG>(ตั้งแต่ 12/01/2020 - 31/03/2021)</h2>
+      </div>
+    
+    
+      <body>
+        <div class="row">
+          <div class="col align-self-start">
+          </div>
+          <div class="col align-self-center">
+          </div>
+          <div class="col align-self-end">
+            <div class="input-group">
+              <div class="col align-self-start">
+                <div class="row">
+                  <div class="input-group-append">
+                    <input type="date" id="inputdate" name="">
+                    <button class="btn btn-success" type="button" onclick="search()">ค้นหา</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="container main-container ">
+          <div class="container mt-5">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <div class="card card-size box1">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ข้อมูลประจำวัน</h5>
+                    </div>
+                    <div class="mt-2">
+                      <h1 id="txn_date" class="text-center font-semibold"></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container">
+            <div class="row mt-5">
+              <div class=" col-lg-3 mt-2 ">
+                <div class="card card-box box-data">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่</h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="new_case" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data1">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่</h5>
+                    </div>
+                    <div class="mt-2">
+      
+                      <h2 id="total_case" class="text-center font-semibold"></h2>
+      
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+      
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data2">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="new_case_excludeabroad" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+      
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data3">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></< /h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="total_case_excludeabroad" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container">
+            <div class="row mt-5">
+              <div class=" col-lg-3 mt-2 ">
+                <div class="card card-box box-data4">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ผู้เข้ารับการรักษา</h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="new_recovered" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data5">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ยอดรวมผู้เข้ารับการรักษา</h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="total_recovered" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div> 
+              </div>
+      
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data6">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">ยอดผู้เสียชีวิต</h5>
+                    </div>
+                    <div class="mt-2">
+      
+                      <h2 id="new_death" class="text-center font-semibold"></h2>
+      
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+      
+              <div class=" col-lg-3 mt-2">
+                <div class="card card-box box-data7">
+                  <div class="card-body px-3 py-4-5">
+                    <div class="">
+                      <h5 class="text-center font-semibold">รวมผู้ป่วยทั้งหมด</h5>
+                    </div>
+                    <div class="mt-2">
+                      <h2 id="total_death" class="text-center font-semibold"></h2>
+                    </div><center><gg style="font-size: larger;"> ราย</gg></center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+      
+    </header>
+ 
+  <style>
+    body {
+      /* background-color: #3e3d3d; */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .n1 {
+      background-color: #E0C9F5;
+      padding: 10px;
+      font-size: 25px;
+    }
+  
+    .main-container {
+      height: 40em;
+      padding: 5em;
+      margin-bottom: 30px;
+      background-color: #ffead9;
+      border: 5px solid rgb(255, 215, 215);
+      border-radius: 12px;
+      padding: 5px;
+    }
+  
+  
+    .card-size {
+      height: 120px;
+      width: 500px;
+      border-radius: 25px;
+    }
+  
+
+    .card-box {
+      height: 148px;
+      border-radius: 25px;
+    }
+  
+  
+    .box1 {
+      background-color: #69a5f5;
+  
+    }
+  
+  
+    .box-data {
+      background-color: #afd7f6;
+  
+    }
+    .box-data1{background-color: #f7f6cf;}
+    .box-data2{background-color: #fbcce0;}
+    .box-data3{background-color: #4f80c0;}
+    .box-data4{background-color: #feb9d0;}
+    .box-data5{background-color: #96cfcf;}
+    .box-data6{background-color: #ecc1fa;}
+    .box-data7{background-color: #efa375;}
+    .box-data8{color: #f1f1f1;}
+    </style>
+   <script>
+
+    let c19 = [];
+  
+    async function getapicovid19() {
+      // ดึงข้อมุลจาก api 
+      const res = await fetch("https://covid19.ddc.moph.go.th/api/Cases/round-1to2-all");
+  
+      // แปลงข้อมูล เป็น json
+      const data = await res.json();
+      console.log(data);
+      c19 = data;
+    }
+  
+    getapicovid19();
+  
+    function search() {
+      // ดึงวันที่
+      let inputdate = document.getElementById("inputdate").value;
+      console.log(inputdate);
+  
+      // ดึงข้อมูลวันที่ ที่ตรงกับ inputdate
+      let searchc19 = c19.find((tree) => {
+        if (tree.txn_date === inputdate) return true;
+      })
+  
+      console.log(searchc19);
+      // เปลี่ยนแปลงข้อมูล ตาม id 
+      document.getElementById("txn_date").innerHTML = searchc19.txn_date 
+      document.getElementById("new_case").innerHTML = searchc19.new_case
+      document.getElementById("total_case").innerHTML = searchc19.total_case
+      document.getElementById("new_case_excludeabroad").innerHTML = searchc19.new_case_excludeabroad
+      document.getElementById("total_case_excludeabroad").innerHTML = searchc19.total_case_excludeabroad
+      document.getElementById("new_death").innerHTML = searchc19.new_death
+      document.getElementById("total_death").innerHTML = searchc19.total_death
+      document.getElementById("new_recovered").innerHTML = searchc19.new_recovered
+      document.getElementById("total_recovered").innerHTML = searchc19.total_recovered
+  
+  
+    }
+  </script>
+        
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-32">
+        <center>   <h1>นาย สุริยา คุณตา 62030090</h1>
+      <h1>  ผู้จัดทำ</h1></center>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </footer>
+   
+    <!-- End page content -->
+  </div>
+
+  <script>
+
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+  </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+</body>
+
+</html>
