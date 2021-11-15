@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+   <!--CSS-->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/stylesheets/covid097.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+       html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          font-family: 'Kanit', sans-serif;
+        }
+
+
+.bg-color {
+    background-color: #EEEEEE;
+  }
+
+  .layout-margin-8 {
+    margin: 3% 8%;
+  }
+
+        .c1,
+        .c2,
+        .c3 {
+            display: block;
+            box-sizing: border-box;
+            width: 25%;
+            padding: 50px;
+
+            margin: 20px !important;
+            text-align: center !important;
+            border-radius: 5px !important;
+            width: 300px;
+            height: 200px;
+            font-family: 'Mitr', sans-serif;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .s1 { 
+            background:  #FF4952    
+        }
+
+        .s2 {
+            background: #FE7C48
+        }
+
+        .s3 {
+            background: #838383
+            
+        }
+
+        .s4 {
+            background: #FF4952 
+        }
+
+        .resultBlock {
+            display: flex;
+            box-sizing: border-box;
+            padding: 0px;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Mitr', sans-serif;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .row {
+            display: flex;
+            box-sizing: border-box;
+            padding: 0px;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Mitr', sans-serif;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .s1,
+        .s2,
+        .s3,
+        .s4 {
+            display: block;
+            box-sizing: border-box;
+            width: 25%;
+            padding: 50px;
+
+            margin: 20px !important;
+            text-align: center !important;
+            border-radius: 5px !important;
+            width: 300px;
+            height: 200px;
+            font-family: 'Mitr', sans-serif;
+            font-family: 'Prompt', sans-serif;
+        }
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 30px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+.n2{
+    font-size: 20px;
+}
+.n1{
+ background-color: #E0C9F5;
+ padding: 10px;
+ font-size: 25px;
+}
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <body class="w3-light-grey">
+
+        <!-- Top container -->
+        <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+         <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+             class="fa fa-bars"></i> เมนู</button>
+         <span id=updatePreDate class="w3-right" style="padding:8px 7px;"></span>
+         <span class="w3-bar-item w3-right" style="padding:8px 1px;">วันที่อัพเดท :</span>
+       </div>
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container" style="padding: 5%;">
+          <h5><b>Covid-19</b></h5>
+        </div>
+        <div class="w3-bar-block">
+          <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+            onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
+          <a href="coG1" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+          <a href="coG2" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+          <a href="coG3" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+          <a href="coG4" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+          <a href="coG5" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+          <a href="coG6" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+          <a href="coG7" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+          <a href="coG8" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+          <a href="coG9" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (1)</a>
+          <a href="coG92" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (2)</a><br><br>
+        </div>
+      </nav>       
+      
+        <!-- Overlay effect when opening sidebar on small screens -->
+       <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+       title="close side menu" id="myOverlay"></div>
+       <!--PAGE CONTENT-->
+       <div class="w3-main" style="margin-left: 300px; margin-top: 43px;">
+           <!-- Header -->
+           <header class="w3-container" style="padding-top: 25px; padding-bottom: 25px;">
+               <h3>
+                   <center><b>รายงานสถานการณ์ COVID-19 ระลอก 3</b></center>
+                   <center><b>(ตั้งแต่ 01/04/2021 –ปัจจุบัน)</b></center>
+               </h3>
+           </header>            
+     
+    
+    <section>
+        <main>
+            <div class="" id="main">
+                <div class="w3-container">
+                    <button class="btn btn-success w3-right" type="button" onclick="onClickFunction()" style="margin-left: 1.5%;">ค้นหา</button>
+                    <input  id="provinceTH" class="form-control w3-right" list="datalistOptions" id="exampleDataList" placeholder="โปรดเลือกจังหวัด"
+                  style="width: 20%;">
+                      <datalist id="datalistOptions">
+                          <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                          <option value="นนทบุรี">นนทบุรี</option>
+                          <option value="ปทุมธานี">ปทุมธานี</option>
+                          <option value="สมุทรปราการ">สมุทรปราการ</option>
+                          <option value="สมุทรสาคร">สมุทรสาคร</option>
+                          <option value="นครปฐม">นครปฐม</option>
+                          <option value="ภูเก็ต">ภูเก็ต</option>
+                          <option value="กระบี่">กระบี่</option>
+                          <option value="กาญจนบุรี">กาญจนบุรี</option>
+                          <option value="กาฬสินธุ์">กาฬสินธุ์"</option>
+                          <option value="กำแพงเพชร">กำแพงเพชร</option>
+                          <option value="ขอนแก่น">ขอนแก่น</option>
+                          <option value="จันทบุรี">จันทบุรี</option>
+                          <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                          <option value="ชัยนาท">ชัยนาท</option>
+                          <option value="ชัยภูมิ">ชัยภูมิ</option>
+                          <option value="ชุมพร">ชุมพร</option>
+                          <option value="ชลบุรี">ชลบุรี</option>
+                          <option value="เชียงใหม่">เชียงใหม่</option>
+                          <option value="เชียงราย">เชียงราย</option>
+                          <option value="ตรัง">ตรัง</option>
+                          <option value="ตราด">ตราด</option>
+                          <option value="ตาก">ตาก</option>
+                          <option value="นครนายก">นครนายก</option>
+                          <option value="นครพนม">นครพนม</option>
+                          <option value="นครราชสีมา">นครราชสีมา</option>
+                          <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                          <option value="นครสวรรค์">นครสวรรค์</option>
+                          <option value="นราธิวาส">นราธิวาส</option>
+                          <option value="น่าน">น่าน</option>
+                          <option value="บึงกาฬ">บึงกาฬ</option>
+                          <option value="บุรีรัมย์">บุรีรัมย์</option>
+                          <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                          <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                          <option value="ปัตตานี">ปัตตานี</option>
+                          <option value="พะเยา">พะเยา</option>
+                          <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                          <option value="พังงา">พังงา</option>
+                          <option value="พิจิตร">พิจิตร</option>
+                          <option value="พิษณุโลก">พิษณุโลก</option>
+                          <option value="เพชรบุรี">เพชรบุรี</option>
+                          <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                          <option value="แพร่">แพร่</option>
+                          <option value="พัทลุง">พัทลุง</option>
+                          <option value="มหาสารคาม">มหาสารคาม</option>
+                          <option value="มุกดาหาร">มุกดาหาร</option>
+                          <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                          <option value="ยโสธร">ยโสธร</option>
+                          <option value="ยะลา">ยะลา</option>
+                          <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                          <option value="ระนอง">ระนอง</option>
+                          <option value="ระยอง">ระยอง</option>
+                          <option value="ราชบุรี">ราชบุรี</option>
+                          <option value="ลพบุรี">ลพบุรี</option>
+                          <option value="ลำปาง">ลำปาง</option>
+                          <option value="ลำพูน">ลำพูน</option>
+                          <option value="เลย">เลย</option>
+                          <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                          <option value="สกลนคร">สกลนคร</option>
+                          <option value="สงขลา">สงขลา</option>
+                          <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                          <option value="สระแก้ว">สระแก้ว</option>
+                          <option value="สระบุรี">สระบุรี</option>
+                          <option value="สิงห์บุรี">สิงห์บุรี</option>
+                          <option value="สุโขทัย">สุโขทัย</option>
+                          <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                          <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                          <option value="สุรินทร์">สุรินทร์</option>
+                          <option value="สตูล">สตูล</option>
+                          <option value="หนองคาย">หนองคาย</option>
+                          <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                          <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                          <option value="อุดรธานี">อุดรธานี</option>
+                          <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                          <option value="อุทัยธานี">อุทัยธานี</option>
+                          <option value="อุบลราชธานี">อุบลราชธานี</option>
+                          <option value="อ่างทอง">อ่างทอง</option>
+                          <option value="ไม่ระบุ">ไม่ระบุ</option>
+                      </datalist>
+                      <!--เลือกวันที่-->
+                      <input class="w3-right"type="date" id="dateInput" style="padding-top: 6px; margin-right: 2%; color:grey;">     
+                      <!--เลือกวันที่-->
+                    </div>
+                 
+                 
+
+            <div class="resultBlock">
+                <div class="s1">
+                    <p class="prefix">ผู้ป่วยรายใหม่ </p>
+
+                    <h6 class="result75" id="new_case"></h6>
+                    <p class="suffix">ราย</p>
+                    <style>
+
+                    </style>
+
+                </div>
+                <div class="s2">
+                    <p class="prefix">ผู้ตายรายใหม่</p>
+
+                    <h6 class="result150" id="new_death"></h6>
+                    <p class="suffix">ราย</p>
+                    <style>
+
+                    </style>
+
+                </div>
+                <div class="s3">
+                    <p class="prefix">จำนวนผู้ป่วยสะสม</p>
+
+                    <h6 class="result500" id="total_case"></h6>
+                    <p class="suffix">ราย</p>
+                    <style>
+
+                    </style>
+
+                </div>
+                <div class="s4">
+                    <p class="prefix">จำนวนตายสะสม</p>
+
+                    <h6 class="result500" id="total_death"></h6>
+                    <p class="suffix">ราย</p>
+                    <style>
+
+                    </style>
+                </div>
+                <style>
+
+                </style>
+            </div>
+            <div class="container">
+
+                <div class="row">
+                    <div class="s3">
+                        <p>จำนวนผู้ป่วยรายใหม่(ไม่นับมาจากต่างประเทศ)</p>
+                        <div class="graph-songs"></div>
+                        <h6 class="result1" id="new_case_excludeabroad">0</h6>
+                        <p class="suffix">ราย</p>
+                    </div>
+                    <div class="s4">
+                        <p>จำนวผู้ป่วยสะสม(ไม่นับมาจากต่างประเทศ)</p>
+                        <div class="graph-hours"></div>
+                        <h6 class="result2">0</h6>
+                        <p class="suffix">ราย</p>
+                    </div>                    
+                </div>
+            </div>
+        </main>
+        <article style="color:white">
+            <p id ="txn_date"></p>
+            <p id ="province"></p>
+            <p id="update_date"></p>          
+        </article>       
+    </section>
+    <footer class="w3-container w3-dark-grey w3-padding-32">
+        <h4>นายอลงกรณ์ การมิตรี 62030097</h4>
+        <!--Data-->
+        <div style="color: #616161; font-size: 1px;">
+        <p id="txn_date"></p>
+        <p id="province"></p>
+        <p id="new_case"></p>
+        <p id="total_case"></p>
+        <p id="new_case_excludeabroad"></p>
+        <p id="total_case_excludeabroad"></p>
+        <p id="new_death"></p>
+        <p id="total_death"></p>
+             
+    </footer>
+    <!-- End page content -->
+
+            </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="/javascripts/covidUpdateDate.js"></script>
+        <script src="/javascripts/covid097.js"></script>
+</body>
+
+</html>
