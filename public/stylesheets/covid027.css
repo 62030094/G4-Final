@@ -1,3 +1,25 @@
+
+body {
+  background: url('https://www.emeraldgrouppublishing.com/sites/default/files/image/covid-cells.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center center;
+}
+.covid-font {
+  font-family: 'Prompt', sans-serif;
+}
+.bg-tud-tid {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px 15px 15px 15px !important;
+}
+.bg-positivity {
+  background: rgba(0, 0, 42, 0.6);
+  border-radius: 15px 15px 15px 15px !important;
+}
+.bg-graph {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px 15px 15px 15px !important;
+}
 body
 {
   margin: 0;
