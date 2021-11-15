@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Covid - 19</title>
+<title>ข้อมูลผู้ป่วยระลอก 3</title>
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/stylesheets/covid050.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/test.css">
 </head>>
 <style>
   html,
@@ -35,6 +36,7 @@
   <span class="w3-bar-item w3-right" style="padding:8px 1px;">วันที่อัพเดท :</span>
 </div>
 
+<!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container" style="padding: 5%;">
     <h5><b>Covid-19</b></h5>
@@ -42,18 +44,18 @@
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
       onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
-    <a href="covid027.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
-    <a href="covid099.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
-    <a href="covid050.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด</a><br><br>
+    <a href="coG1" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+    <a href="coG2" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+    <a href="coG3" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+    <a href="coG4" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+    <a href="coG5" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+    <a href="coG6" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+    <a href="coG7" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+    <a href="coG8" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+    <a href="coG9" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (1)</a>
+    <a href="coG92" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (2)</a><br><br>
   </div>
 </nav>
-
 
 
   <!-- Overlay effect when opening sidebar on small screens -->
@@ -65,130 +67,100 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:25px; padding-bottom:25px;">
-      <h5><center><b>รายงานข้อมูลผู้ป่วย COVID-19 ระลอก 3 <br>(ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</b></center></h5>
+      <h5><center><b>ข้อมูลผู้ป่วยระลอก 3</b></center></h5>
+
+
+
+      <div class="row">
+        <div class="col align-self-start">
+        </div>
+        <div class="col align-self-center">
+        </div>
+        <div class="col-sm-10 align-self-end">
+          <div class="input-group">
+            <div class="col align-self-start">
+              <div class="container col-md-4 offset-md-3 mt-5">
+                <div class="input-group-append">
+                  <input type="date" id="inputdate" name="">
+                  <!-- Set ปุมเรัยกฟังค์ชั่น ID DateSearch -->
+                  <button class="btn btn-success" type="button" onclick="dateSearch()">ค้นหา</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <center>
+
+          <!-- Set ID TableData -->
+        <table id='tabledata' class="container w3-center" style="margin-top:3.5%;">
+            <thead>
+              <tr class="head">
+                <th scope="col"><b>&nbsp;ลำดับ&nbsp;</b></th>
+                <th scope="col" colspan="2">&nbsp;เพศ&nbsp;</th>
+                <th scope="col">&nbsp;อายุ&nbsp;</th>
+                <th scope="col">&nbsp;ช่วงอายุ&nbsp;</th>
+                <th scope="col">&nbsp;เชื้อชาติ&nbsp;</th>
+                <th scope="col">&nbsp;อาชีพ&nbsp;</th>
+                <th scope="col">&nbsp;สาเหตุความเสี่ยง&nbsp;</th>
+                <th scope="col">&nbsp;ประเภทผู้ป่วย&nbsp;</th>
+                <th scope="col">&nbsp;จังหวัด&nbsp;</th>
+                <th scope="col">&nbsp;วันที่อัพเดท&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td colspan="2" id="province2">&nbsp;Mark&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;Mark&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td colspan="2">&nbsp;Mark&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;Mark&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">&nbsp;Larry the Bird&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;Mark&nbsp;</td>
+                <td>&nbsp;Otto&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+                <td>&nbsp;@mdo&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          </center>
+</section>
+</div>
+
     </header>
 
     <div class="w3-container">
-        <button class="btn btn-success w3-right" type="button" onclick="onClickFunction()" style="margin-left: 1.5%;">ค้นหา</button>
-        <input class="form-control w3-right" list="datalistOptions" id="exampleDataList" placeholder="โปรดเลือกจังหวัด"
-        style="width: 20%;">
-        <datalist id="datalistOptions">
-          <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-          <option value="นนทบุรี">นนทบุรี</option>
-          <option value="ปทุมธานี">ปทุมธานี</option>
-          <option value="สมุทรปราการ">สมุทรปราการ</option>
-          <option value="สมุทรสาคร">สมุทรสาคร</option>
-          <option value="นครปฐม">นครปฐม</option>
-          <option value="ภูเก็ต">ภูเก็ต</option>
-          <option value="กระบี่">กระบี่</option>
-          <option value="กาญจนบุรี">กาญจนบุรี</option>
-          <option value="กาฬสินธุ์">กาฬสินธุ์</option>
-          <option value="กำแพงเพชร">กำแพงเพชร</option>
-          <option value="ขอนแก่น">ขอนแก่น</option>
-          <option value="จันทบุรี">จันทบุรี</option>
-          <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
-          <option value="ชัยนาท">ชัยนาท</option>
-          <option value="ชัยภูมิ">ชัยภูมิ</option>
-          <option value="ชุมพร">ชุมพร</option>
-          <option value="ชลบุรี">ชลบุรี</option>
-          <option value="เชียงใหม่">เชียงใหม่</option>
-          <option value="เชียงราย">เชียงราย</option>
-          <option value="ตรัง">ตรัง</option>
-          <option value="ตราด">ตราด</option>
-          <option value="ตาก">ตาก</option>
-          <option value="นครนายก">นครนายก</option>
-          <option value="นครพนม">นครพนม</option>
-          <option value="นครราชสีมา">นครราชสีมา</option>
-          <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
-          <option value="นครสวรรค์">นครสวรรค์</option>
-          <option value="นราธิวาส">นราธิวาส</option>
-          <option value="น่าน">น่าน</option>
-          <option value="บึงกาฬ">บึงกาฬ</option>
-          <option value="บุรีรัมย์">บุรีรัมย์</option>
-          <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
-          <option value="ปราจีนบุรี">ปราจีนบุรี</option>
-          <option value="ปัตตานี">ปัตตานี</option>
-          <option value="พะเยา">พะเยา</option>
-          <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
-          <option value="พังงา">พังงา</option>
-          <option value="พิจิตร">พิจิตร</option>
-          <option value="พิษณุโลก">พิษณุโลก</option>
-          <option value="เพชรบุรี">เพชรบุรี</option>
-          <option value="เพชรบูรณ์">เพชรบูรณ์</option>
-          <option value="แพร่">แพร่</option>
-          <option value="พัทลุง">พัทลุง</option>
-          <option value="มหาสารคาม">มหาสารคาม</option>
-          <option value="มุกดาหาร">มุกดาหาร</option>
-          <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
-          <option value="ยโสธร">ยโสธร</option>
-          <option value="ยะลา">ยะลา</option>
-          <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
-          <option value="ระนอง">ระนอง</option>
-          <option value="ระยอง">ระยอง</option>
-          <option value="ราชบุรี">ราชบุรี</option>
-          <option value="ลพบุรี">ลพบุรี</option>
-          <option value="ลำปาง">ลำปาง</option>
-          <option value="ลำพูน">ลำพูน</option>
-          <option value="เลย">เลย</option>
-          <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-          <option value="สกลนคร">สกลนคร</option>
-          <option value="สงขลา">สงขลา</option>
-          <option value="สมุทรสงคราม">สมุทรสงคราม</option>
-          <option value="สระแก้ว">สระแก้ว</option>
-          <option value="สระบุรี">สระบุรี</option>
-          <option value="สิงห์บุรี">สิงห์บุรี</option>
-          <option value="สุโขทัย">สุโขทัย</option>
-          <option value="สุพรรณบุรี">สุพรรณบุรี</option>
-          <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
-          <option value="สุรินทร์">สุรินทร์</option>
-          <option value="สตูล">สตูล</option>
-          <option value="หนองคาย">หนองคาย</option>
-          <option value="หนองบัวลำภู">หนองบัวลำภู</option>
-          <option value="อำนาจเจริญ">อำนาจเจริญ</option>
-          <option value="อุดรธานี">อุดรธานี</option>
-          <option value="อุตรดิตถ์">อุตรดิตถ์</option>
-          <option value="อุทัยธานี">อุทัยธานี</option>
-          <option value="อุบลราชธานี">อุบลราชธานี</option>
-          <option value="อ่างทอง">อ่างทอง</option>
-          <option value="ไม่ระบุ">ไม่ระบุ</option>
-        </datalist>
-        <input class="w3-right"type="date" id="dateInput" style="padding-top: 6px; margin-right: 2%;">
-      <div>
-        <div class="container" id="resultBlock">
-            <div class="row">
-                <div id="sm">
-                    <p id="prefix">จำนวนยอดผู้ติดเชื้อรายใหม่<br>(ระลอก 3) </p>
-                    <h6 id="new_case">0</h6>
-                    <p id="suffix">(ราย)</p>
-                </div>
-                <div id="rm">
-                    <p id="prefix">จำนวนผู้ติดเชื้อสะสม<br>(ระลอก 3) </p>
-                    <h6 id="total_case">0</h6>
-                    <p id="suffix">(ราย)</p>
-                </div>
-                <div id="md">
-                    <p id="prefix">จำนวนผู้ติดเชื้อรายใหม่<br>(ในประเทศ ระลอก 3)</p>
-                    <h6 id="new_case_excludeabroad">0</h6>
-                    <p id="suffix">(ราย)</p>
-                </div>
-                <div id="lg">
-                    <p id="prefix">จำนวนผู้ติดเชื้อสะสม<br>(ในประเทศ ระลอก 3)</p>
-                    <h6 id="total_case_excludeabroad">0</h6>
-                    <p id="suffix">(ราย)</p>
-                </div>
-                <div id="lh">
-                    <p id="prefix">จำนวนผู้เสียชิวิต<br>(ระลอก 3)</p>
-                    <h6 id="total_death">0</h6>
-                     <p id="suffix">(ราย)</p>
-                </div>
-            </div>
-        </div>
-      </div>
     </div>
 
       <!-- Footer -->
       <footer class="w3-container w3-dark-grey w3-padding-32">
-        <h4>ปัณณธร ลิขิต 62030050</h4>
+        <center><h2>นาย ปัณณธร ลิขิต 62030050</h2>
+        <h2>  ผู้จัดทำ</h2></center>
       </footer>
 
       <!-- End page content -->

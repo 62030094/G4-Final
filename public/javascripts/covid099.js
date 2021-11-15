@@ -8,8 +8,6 @@ async function getapi() {
     covid19data = data;
     console.log(data);
     console.log(covid19data[0].update_date)
-
-    document.getElementById("updateDate").innerHTML = covid19data[0].update_date;
 }
 
 getapi();
