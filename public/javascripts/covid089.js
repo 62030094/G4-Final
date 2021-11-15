@@ -1,49 +1,71 @@
-async function getapi() {
-    const response = await JSC.fetch("	https://covid19.ddc.moph.go.th/api/Cases/today-cases-line-lists");
-    const data = await response.text();
-    //console.log(data);
-    let covid19data = JSC.csv2Json(data,{
-        columns: ["date", "steps", "goal"]
-        
-    });
-    //console.log(covid19data);
-    var order=[];
-    var sex=[];
-    var age=[];
+function provincesearch(){
+    document.getElementById("tabledata").innerHTML=`<tr>
+    <th class="text-left">ลำดับ</th>
+    <th class="text-left">เพศ</th>
+    <th class="text-left">อายุ</th>
+    <th class="text-left">จังหวัด</th>
+    <th class="text-left">ประเทศ</th>
+    <th  class="text-left">ความเสี่ยง</th>
+    <th  class="text-left">สาเหตุการติดเชื้อ</th>
+    </tr> `;
+
+    var search = document.getElementById("sel-province").value;
+    console.log(search);
+    const getdata =  `https://covid19.ddc.moph.go.th/api/Cases/today-cases-line-lists`;
+    showdata();
+async function showdata(){
+    var textdate =[];
+    var gender =[];
+    var agenumber=[];
     var agerange=[];
-    var country=[];
+    var nation=[];
+    var job=[];
     var risk=[];
-    var cause=[];
+    var pat=[];
     var province=[];
-    for(let i=0;i<covid19data.length-1;i++){
+    var patid=[];
+
+    const response = await fetch(getdata);
+    const data = await response.text();
+    const table  = data.split('\n').splice(1);
+    var i = 0;
+    
+    table.forEach(row=>{
         
-        order.push(covid19data[i][1]); 
-        sex.push(covid19data[i][2]);
-        age.push(covid19data[i][3]);
-        agerange.push(covid19data[i][4]);
-        country.push(covid19data[i][5]);
-        risk.push(covid19data[i][7]);
-        cause.push(covid19data[i][8]);
-        province.push(covid19data[i][9]);
-                    
-    }
-    console.log(order);
-    console.log(sex);
-    console.log(age);
-    console.log(agerange);
-    console.log(country);
-    console.log(risk);
-    console.log(cause);
-    console.log(province);
+        var column=row.split(',')
+        
+        var patidtb=column[1];
+        var sextb=column[2];
+        var agetb=column[3];
+        var provincetb=column[9];
+        var nationtb=column[5];
+        var risktb=column[7];
+        var pattb=column[8];
+        
+
+        if (search==provincetb){
+            //i++
+            //if (i<10){
+                document.getElementById("tabledata").innerHTML+= `<tr>
+                <td class="text-left">${patidtb}</td>
+                <td class="text-left">${sextb}</td>
+                <td class="text-left">${agetb}</td>
+                <td class="text-left">${provincetb}</td>
+                <td class="text-left">${nationtb}</td>
+                <td class="text-left">${risktb}</td>
+                <td  class="text-left">${pattb}</td>
+                </tr>`
+                console.log(patidtb,sextb,agetb,provincetb,nationtb,risktb,pattb);
+                
+            //}
+        }
+    })
 
 
-    //document.getElementById("order").innerHTML = covid19data[0].update_date;
-    
 
-    
-    //console.log(sex);       
-
-    
 }
-getapi();
+
+}
+
+
 
