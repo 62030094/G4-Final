@@ -11,8 +11,6 @@
         <link rel="stylesheet" href="/stylesheets/covid083.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
-
-
     <body class="w3-light-grey">
 
         <!-- Top container -->
@@ -228,41 +226,17 @@
                 </div>
             </div>
             <!-- Cards 3 --> 
-            <!--header 2-->
-            <h5 class = "header2">ตารางแสดงข้อมูลภาพรวม</h5>
+            <!--header 2
+            <h5 class = "header2">ตารางแสดงข้อมูลภาพรวม</h5>-->
             <!--header 2-->
 
-            <!--ค้นหา--> 
-            <button class="btn btn-success w3-right" type="button" onclick="onClickFunction2()" style="margin-right: 1.5%">ค้นหา</button>
+            <!--ค้นหา
+            <button class="btn btn-success w3-right" type="button" onclick="onClickFunction2()" style="margin-right: 1.5%">ค้นหา</button>--> 
              <!--ค้นหา--> 
-             <!--เลือกวันที่ 2-->
-             <input class="w3-right"type="date" id="dateInput2" style="padding-top: 10px; margin-right:2%; color: gray;">
+             <!--เลือกวันที่ 2
+             <input class="w3-right"type="date" id="dateInput2" style="padding-top: 10px; margin-right:2%; color: gray;">-->
              <!--เลือกวันที่2-->
 
-        <!--Table-->
-        <table class="table table-striped table-hover" id="tableTxn" style="margin-top:4%;">
-            <thead>
-              <tr class="table-secondary">
-                <th scope="col"><b>ลำดับ</b></th>
-                <th scope="col" colspan="2">จังหวัด</th>
-                <th scope="col">ผู้ติดเชื้อรายใหม่</th>
-                <th scope="col">ผู้ติดเชื้อสะสม</th>
-                <th scope="col">ผู้เสียชีวิตรายใหม่</th>
-                <th scope="col">ผู้เสียชีวิตสะสม</th>
-                <th scope="col">ผู้ติดเชื้อรายใหม่ไม่นับมาจากต่างประเทศ</th>
-                <th scope="col">ผู้ติดเชื้อสะสมไม่นับมาจากต่างประเทศ</th>
-              </tr>
-            </thead>
-           <tbody id="myTable">
-              <tr>
-                <th scope="row" id="myRowTable">1</th><td colspan="2" id="province2">-</td><td  id="new_case2">-</td><td id="total_case2">-</td><td id="new_ death2">-</td><td id="total_death2">-</td><td id="new_case_excludeabroad2">-</td><td id="total_case_excludeabroad2">-</td>
-              </tr>
-              <tr>
-                <th scope="row" id="myRowTable">1</th><td colspan="2" id="province2">-</td><td  id="new_case2">-</td><td id="total_case2">-</td><td id="new_ death2">-</td><td id="total_death2">-</td><td id="new_case_excludeabroad2">-</td><td id="total_case_excludeabroad2">-</td>
-              </tr>
-            </tbody>
-          </table>
-        <!--Table-->
         <!-- Footer -->
             <footer class="w3-container w3-dark-grey w3-padding-32">
                 <h4>นายศุภวัฒน์ หลีกภัย 62030083</h4>
@@ -291,6 +265,7 @@
                 <!--Data2-->               
             </footer>
             <!-- End page content -->
+            
         </div>
         <!--รายละเอียด-->
         </div>
@@ -323,5 +298,6 @@
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
          <script src="/javascripts/covidUpdateDate.js"></script>
          <script src="/javascripts/covid083.js"></script>
+         <script src="/javascripts/covid083table.js"></script>
     </body>
 </html>

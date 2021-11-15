@@ -26,7 +26,7 @@
             document.getElementById('total_death').innerHTML = searchcovid19data.total_death;
             console.log(searchcovid19data);
     }
-    
+    /*
     function onClickFunction2(data){
         let birthday =  document.getElementById("dateInput2").value;
         let searchcovid19data = covid19data.find((data) => {
@@ -47,6 +47,6 @@
                         <td id="total_case_excludeabroad2">-</td>
                     </tr>
             `
-        }
+        }*/
         
     
