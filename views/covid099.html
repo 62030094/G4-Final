@@ -43,15 +43,16 @@
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
       onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
-    <a href="covid027.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
-    <a href="covid099.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
-    <a href="covid050.html" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด</a><br><br>
+    <a href="coG1" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+    <a href="coG2" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+    <a href="coG3" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+    <a href="coG4" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+    <a href="coG5" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+    <a href="coG6" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+    <a href="coG7" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+    <a href="coG8" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+    <a href="coG9" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (1)</a>
+    <a href="coG92" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (2)</a><br><br>
   </div>
 </nav>
 
@@ -173,7 +174,7 @@
             <p style="padding-top: 5px;">ราย</p>
           </div>
           <div id="ba">
-            <p>จำนวนผู้ที่เสียชีวิต</p>
+            <p>จำนวนผู้ที่เสียชีวิตประจำวัน</p>
             <h5 id=newDeath>0</h5>
             <p style="padding-top: 5px;">ราย</p>
           </div>
@@ -183,7 +184,7 @@
         <div class="row">
         <div id="resultBlock1">
           <div id="nm">
-            <p >จำนวนผู้ติดเชื้อรายใหม่สะสม </p>
+            <p >จำนวนผู้ติดเชื้อรายใหม่สะสม</p>
             <h5 id=totalCase>0</h5>
             <p style="padding-top: 5px;">ราย</p>
           </div>
@@ -200,14 +201,13 @@
         </div>
       </div>
     </div>
-
-      <!-- Footer -->
-      <footer class="w3-container w3-dark-grey w3-padding-32">
+    <footer class="w3-container w3-dark-grey w3-padding-32">
         <h4>นายอัศวชาติ ดินแดง 62030099</h4>
-      </footer>
-
+        <p>62030099@kmitl.ac.th</p>
+    </footer>
       <!-- End page content -->
     </div>
+  </div>
 
     <script>
 
@@ -227,7 +227,6 @@
           overlayBg.style.display = "block";
         }
       }
-
       // Close the sidebar with the close button
       function w3_close() {
         mySidebar.style.display = "none";
