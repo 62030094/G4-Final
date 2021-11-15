@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('covidR3');
+  res.render('covid089.html');
 });
 
 module.exports = router;
