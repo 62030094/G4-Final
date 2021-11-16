@@ -22,7 +22,7 @@
             document.getElementById('total_case').innerHTML = searchcovid19data.total_case;
             document.getElementById('new_case_excludeabroad').innerHTML = searchcovid19data.new_case_excludeabroad;
             document.getElementById('total_case_excludeabroad').innerHTML = searchcovid19data.total_case_excludeabroad;
-            document.getElementById('new_ death').innerHTML = searchcovid19data.new_death;
+            document.getElementById('new_death').innerHTML = searchcovid19data.new_death;
             document.getElementById('total_death').innerHTML = searchcovid19data.total_death;
             console.log(searchcovid19data);
     }
