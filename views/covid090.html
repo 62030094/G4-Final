@@ -93,7 +93,7 @@
           <div class="container mt-5">
             <div class="row justify-content-md-center">
               <div class="col-md-auto">
-                <div class="card card-size box1">
+                <div class="card card-size box-data">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ข้อมูลวัน</h5>
@@ -109,7 +109,7 @@
           <div class="container">
             <div class="row mt-5">
               <div class=" col-lg-3 mt-2 ">
-                <div class="card card-box box-data">
+                <div class="card card-box box-data1">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่</h5>
@@ -121,7 +121,7 @@
                 </div>
               </div>
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data1">
+                <div class="card card-box box-data2">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่</h5>
@@ -136,7 +136,7 @@
               </div>
       
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data2">
+                <div class="card card-box box-data3">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></h5>
@@ -149,7 +149,7 @@
               </div>
       
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data3">
+                <div class="card card-box box-data4">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยรายใหม่ <br>ภายในประเทศ</br></< /h5>
@@ -166,10 +166,10 @@
           <div class="container">
             <div class="row mt-5">
               <div class=" col-lg-3 mt-2 ">
-                <div class="card card-box box-data4">
+                <div class="card card-box box-data1_1">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
-                      <h5 class="text-center font-semibold">ผู้เข้ารับการรักษา</h5>
+                      <h5 class="text-center font-semibold">ผู้ป่วยที่รักษาหายแล้ว</h5>
                     </div>
                     <div class="mt-2">
                       <h2 id="new_recovered" class="text-center font-semibold"></h2>
@@ -178,10 +178,10 @@
                 </div>
               </div>
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data5">
+                <div class="card card-box box-data2_2">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
-                      <h5 class="text-center font-semibold">ยอดรวมผู้เข้ารับการรักษา</h5>
+                      <h5 class="text-center font-semibold">ยอดรวมผู้ป่วยที่รักษาหายแล้ว</h5>
                     </div>
                     <div class="mt-2">
                       <h2 id="total_recovered" class="text-center font-semibold"></h2>
@@ -191,7 +191,7 @@
               </div>
       
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data6">
+                <div class="card card-box box-data3_3">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">ยอดผู้เสียชีวิต</h5>
@@ -206,7 +206,7 @@
               </div>
       
               <div class=" col-lg-3 mt-2">
-                <div class="card card-box box-data7">
+                <div class="card card-box box-data4_4">
                   <div class="card-body px-3 py-4-5">
                     <div class="">
                       <h5 class="text-center font-semibold">รวมผู้ป่วยทั้งหมด</h5>
@@ -224,64 +224,128 @@
       
     </header>
  
-  <style>
-    body {
-      /* background-color: #3e3d3d; */
-      margin: 0;
-      padding: 0;
-    }
-  
-    .n1 {
-      background-color: #E0C9F5;
-      padding: 10px;
-      font-size: 25px;
-    }
-  
-    .main-container {
-      height: 40em;
-      padding: 5em;
-      margin-bottom: 30px;
-      background-color: #ffead9;
-      border: 5px solid rgb(255, 215, 215);
-      border-radius: 12px;
-      padding: 5px;
-    }
-  
-  
-    .card-size {
-      height: 120px;
-      width: 500px;
-      border-radius: 25px;
-    }
-  
+    <style>
 
-    .card-box {
-      height: 148px;
-      border-radius: 25px;
-    }
+      body {
+          /* background-color: #3e3d3d; */
+          margin: 0;
+          padding: 0;
+        }
+      
+        .n1 {
+          background-color: #000000;
+          padding: 10px;
+          font-size: 25px;
+        }
+      
+        .main-container {
+          height: 49em;
+          padding: 5em;
+          margin-bottom: 30px;
+          background-color: #222222;
+          border: 5px  ;
+          border-radius: 12px;
+          padding: 5px;
+        }
+        /* สีคอน */
+      
+      
+        .card-size {
+          height: 120px;
+          width: 500px;
+          border-radius: 25px;}
+      
+      
+        .card-box {
+          height: 120px;
+          border-radius: 8px;
+          border: 3.4px ;
+          
+        }
+        
+        .carter-radius{
+          height: 120px;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          ;
+        }
+      
+        .card-boxes {
+          height: 120px;
+          border-bottom-left-radius: 50px;
+          border: 3.4px ;
+        }
+      
+        .card-boxess{
+          height: 120px;
+          border-bottom-right-radius: 50px;
+          border: 3.4px ;
+        }
+      
+      
+        .box1 {
+          background-color:#9faa98;
+          /* ไม่ได้ใช้ */
   
   
-    .box1 {
-      background-color: #69a5f5;
+        }
+        .box-data {
+          background-color:#ffcc00;
+          color: #ffff;
+          /* หัว */
   
-    }
+        }
+      .box-data1{
+        background-color:#d02f2f ;
+        border: 3.4px ;  
+      color: #ffff;  }
+        /* ผู้ป่วยรายใหม่ */
+  
+      .box-data1_1{
+        background: #a62626;
+        color: #ffff;
+        height: 135px;
+      }
+  
+      .box-data2{
+        background-color:#242448;
+        border: 3.4px  ;
+        color: #ffff;
+        height: 135px;
+      }
+      /* รายประเทศ */
+      .box-data2_2{
+        background:#1d1d3a;
+        color: #ffff;
+        height: 135px;
+      }
   
   
-    .box-data {
-      background-color: #afd7f6;
+      .box-data3{
+        background-color:#27bbfa;
+        color: #ffff;
+        height: 135px;
+      }
+      .box-data3_3{
+        background-color: #1f96c8;
+        color: #ffff;
+        height: 135px;
+      }
+      
   
-    }
-    .box-data1{background-color: #f7f6cf;}
-    .box-data2{background-color: #fbcce0;}
-    .box-data3{background-color: #4f80c0;}
-    .box-data4{background-color: #feb9d0;}
-    .box-data5{background-color: #96cfcf;}
-    .box-data6{background-color: #ecc1fa;}
-    .box-data7{background-color: #efa375;}
-    .box-data8{color: #f1f1f1;}
-    </style>
-   <script>
-
+      .box-data4{
+        background:#32b76a;
+        color: #ffff;
+        height: 135px;
+      }
+      .box-data4_4{
+        background: #289255;
+        color: #ffff;
+        height: 135px;
+      }
+      
+      </style>
+  <script>
     let c19 = [];
   
     async function getapicovid19() {
@@ -328,7 +392,7 @@
     <!-- Footer -->
     <footer class="w3-container w3-dark-grey w3-padding-32">
         <center>   <h1>นาย สุริยา คุณตา 62030090</h1>
-      <h1>  ผู้จัดทำ</h1></center>
+           <h2>62030090@kmitl.ac.th  ผู้จัดทำ</h2 ></center>
       </footer>
    
     <!-- End page content -->
