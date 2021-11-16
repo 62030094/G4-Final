@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>Covid - 19</title>
+<title>Covid - 19</title>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="../public/stylesheets/template.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>>
 <style>
   html,
@@ -31,33 +27,34 @@
 
 <body class="w3-light-grey">
 
-  <!-- Top container -->
-  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
-        class="fa fa-bars"></i> เมนู</button>
-    <span class="w3-right" style="padding:8px 7px;"></span>
-    <span class="w3-bar-item w3-right" style="padding:8px 1px;"></span>
-  </div>
+ <!-- Top container -->
+ <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+      class="fa fa-bars"></i> เมนู</button>
+  <span id=updatePreDate class="w3-right" style="padding:8px 7px;"></span>
+  <span class="w3-bar-item w3-right" style="padding:8px 1px;">วันที่อัพเดท :</span>
+</div>
 
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-    <div class="w3-container" style="padding: 5%;">
-      <h5><b>Covid-19</b></h5>
-    </div>
-    <div class="w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
-        onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด</a><br><br>
-    </div>
-  </nav>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container" style="padding: 5%;">
+    <h5><b>Covid-19</b></h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+      onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  ปิดเมนู</a>
+    <a href="coG1" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน</a>
+    <a href="coG2" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</a>
+    <a href="coG3" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยประจำวัน</a>
+    <a href="coG4" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3</a>
+    <a href="coG5" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</a>
+    <a href="coG6" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 3</a>
+    <a href="coG7" class="w3-bar-item w3-button w3-padding"><i class=""></i>  ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 </a>
+    <a href="coG8" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</a>
+    <a href="coG9" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (1)</a>
+    <a href="coG92" class="w3-bar-item w3-button w3-padding"><i class=""></i>  รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 แยกตามรายจังหวัด (2)</a><br><br>
+  </div>
+</nav>
 
 
   <!-- Overlay effect when opening sidebar on small screens -->
@@ -368,8 +365,10 @@
       overlayBg.style.display = "none";
     }
   </script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="/javascripts/covidUpdateDate.js"></script>
+    <script src="/javascripts/"></script>
 </body>
-
 </html>
